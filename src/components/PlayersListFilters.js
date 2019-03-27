@@ -5,13 +5,13 @@ import { setFilterText, setFilterType, sortByName, sortBySkill } from '../action
 const PlayersListFilters = (props) => (
     <div className="players-list-filters">
         <h2>Filter Players</h2>
-        <div class="filter-group">
+        <div className="filter-group">
             <label>Search For:</label><br />
             <input type="text" value={props.filters.text} onChange={(e) => {
                 props.dispatch(setFilterText(e.target.value));
             }} />
         </div>
-        <div class="filter-group">
+        <div className="filter-group">
             <label>Sort By:</label><br />
             <select onChange={(e) => {
                 if (e.target.value === "name") {
@@ -25,7 +25,7 @@ const PlayersListFilters = (props) => (
                 <option value="skill_level">Skill Level</option>
             </select>
         </div>
-        <div class="filter-group">
+        <div className="filter-group">
             <label>Sport Type:</label><br />
             <select onChange={(e) => {
                 props.dispatch(setFilterType(e.target.value));
